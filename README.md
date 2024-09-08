@@ -2,6 +2,13 @@
 
 This is a **Next.js** application built with **TypeScript** that fetches country data from the REST API at [https://restcountries.com/v3.1/all](https://restcountries.com/v3.1/all) and displays it in an interactive, responsive dashboard. Users can search for countries, sort them by population, and filter by region, as well as compare two countries side-by-side.
 
+![image](https://github.com/user-attachments/assets/69b29c40-79e6-409c-9964-c90eb2e2c3e7)
+![image](https://github.com/user-attachments/assets/49d6cefb-978a-40da-a4bf-5f664ef95c5b)
+![image](https://github.com/user-attachments/assets/0aec7778-005c-4f72-b3a8-c198665bbde8)
+![image](https://github.com/user-attachments/assets/28f545e6-8405-4e4c-bdc2-9c0515218716)
+![image](https://github.com/user-attachments/assets/4927063a-10d9-49d5-a40b-d47dc56c359b)
+
+
 ## Features
 
 - Fetches country data from a REST API.
