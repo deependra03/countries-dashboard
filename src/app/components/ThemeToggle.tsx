@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { useDarkMode } from "../context/DarkModeContext";
 
@@ -7,19 +7,6 @@ const TOGGLE_CLASSES =
   "text-sm font-medium flex items-center gap-2 px-3 md:pl-3 md:pr-3.5 py-3 md:py-1.5 transition-colors relative z-10";
 
 export type ToggleOptionsType = "light" | "dark";
-
-// const Example = () => {
-//   const [selected, setSelected] = useState<ToggleOptionsType>("light");
-//   return (
-//     <div
-//       className={`grid h-[200px] place-content-center px-4 transition-colors ${
-//         selected === "light" ? "bg-white" : "bg-slate-900"
-//       }`}
-//     >
-//       <ThemeToggle selected={selected} setSelected={setSelected} />
-//     </div>
-//   );
-// };
 
 const ThemeToggle = ({
   selected,

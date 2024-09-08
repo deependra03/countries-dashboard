@@ -6,13 +6,15 @@ import FilterBar from '../../src/app/components/FilterBar';
 import { Country } from '../../src/app/types';
 import { filterCountriesByRegion, searchCountries, sortCountriesByPopulation } from '../../src/app/utils';
 import ThemeToggle, { ToggleOptionsType } from '@/app/components/ThemeToggle';
+import CountryComparison from '@/app/components/CountryComparison';
 
 const HomePage: React.FC = () => {
   const { countries, loading, error } = useFetchCountries();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
-   const [selected, setSelected] = useState<ToggleOptionsType>("light");
+  const [selected, setSelected] = useState<ToggleOptionsType>("light");
+  const [comparison, setComparison] = useState(false);
 
   const regions = useMemo(() => {
     const regionSet = new Set(countries.map((country) => country.region));
@@ -40,7 +42,7 @@ const HomePage: React.FC = () => {
 
 
   return (
-    <div className='px-4 py-2 dark:bg-black dark:text-white'>
+    <div className='px-4 py-2 dark:bg-black dark:text-white h-screen'>
       <div className='flex items-center justify-center'
     >
       <ThemeToggle selected={selected} setSelected={setSelected}/>
@@ -52,10 +54,14 @@ const HomePage: React.FC = () => {
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
       />
-      <button onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}>
-        Sort by Population ({sortOrder})
+      <div className='flex items-center justify-between my-2 py-2'>
+      <button onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className='text-blue-500 p-2'>
+       <span className='text-sm text-gray-200 font-semibold'>Sort By Population  {sortOrder === 'asc' ? '▲' : '▼'}</span>
       </button>
-      <CountryGrid countries={filteredCountries} />
+      <button className='border-2 shadow p-2 rounded-md dark:text-white text-sm font-semibold' onClick={()=>setComparison(!comparison)}> {!comparison ? "Undo Compare": "Compare"} </button>
+      </div>
+      { comparison ? <CountryGrid countries={filteredCountries} /> :
+      <CountryComparison countries={filteredCountries}/>}
     </div>
   );
 };

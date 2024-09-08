@@ -1,4 +1,3 @@
-// utils/index.ts
 import { Country } from '../types';
 
 export const sortCountriesByPopulation = (
