@@ -65,7 +65,7 @@ const CountryComparison: React.FC<CountryComparisonProps> = ({ countries }) => {
 
         {secondCountry && (
            <div className="w-1/2 p-4 bg-white shadow-md rounded-md dark:bg-gray-800 text-sm" style={{
-            backgroundImage: `url(${firstCountry?.flags.png})`,
+            backgroundImage: `url(${secondCountry?.flags.png})`,
             backgroundSize: 'cover',  // Ensure the image covers the entire element
             backgroundPosition: 'center', // Center the image
             backgroundRepeat: 'no-repeat' // Prevent the image from repeating

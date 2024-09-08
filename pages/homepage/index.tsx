@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
   const [selectedRegion, setSelectedRegion] = useState('');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   const [selected, setSelected] = useState<ToggleOptionsType>("light");
-  const [comparison, setComparison] = useState(false);
+  const [comparison, setComparison] = useState(true);
 
   const regions = useMemo(() => {
     const regionSet = new Set(countries.map((country) => country.region));
