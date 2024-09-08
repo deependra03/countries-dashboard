@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Country Dashboard
+
+This is a **Next.js** application built with **TypeScript** that fetches country data from the REST API at [https://restcountries.com/v3.1/all](https://restcountries.com/v3.1/all) and displays it in an interactive, responsive dashboard. Users can search for countries, sort them by population, and filter by region, as well as compare two countries side-by-side.
+
+## Features
+
+- Fetches country data from a REST API.
+- Sorts countries by population (ascending/descending).
+- Filters countries by region.
+- Search functionality to find countries by name or capital.
+- Responsive grid layout for country cards.
+- Lazy loading for improved performance.
+- Displays detailed country information on card click (flag, name, population, capital, region, currency, languages, time zones).
+- Dark mode toggle with persistent user preference.
+- Compare two countries side by side.
+- Map or chart visualization for additional insights.
+- Server-Side Rendering (SSR) for faster initial load.
+- Custom hooks for data fetching and caching.
+- Performance optimization using **Next.js** image optimization and lazy loading.
+
+## Advanced Features
+
+- Compare two countries side by side.
+- A visualization (map/chart) for comparing countries.
+- Unit tests for utility functions using Jest.
+- Component and integration tests using React Testing Library.
+
+## Technologies Used
+
+- **Next.js** for server-side rendering and static generation.
+- **TypeScript** for static type checking.
+- **Tailwind CSS** for styling and dark mode.
+- **React Hooks** for local state management.
+- **React Context API** for global state management.
+- **Jest** for unit testing.
+- **React Testing Library** for component and integration tests.
+- **Chart.js** (or another visualization library) for country data visualization.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (v14 or higher)
+- npm (v6 or higher) or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/deependra03/countries-dashboard.git
+   cd country-dashboard
+
+
+## Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev: Starts the application in development mode.
+npm run build: Builds the app for production.
+npm run start: Starts the production server.
+npm run lint: Lints the TypeScript codebase.
+npm run test: Runs all unit, component, and integration tests.
+npm run test:watch: Runs tests in watch mode
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Testing
+This project uses Jest for unit testing and React Testing Library for component and integration testing.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Running Tests
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run test
+npm run test:watch
+```
